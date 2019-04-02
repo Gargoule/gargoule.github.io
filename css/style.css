@@ -219,6 +219,8 @@ input[type=search]:focus {
     background-position: 220px center;
 }
 
+input[type=search]::-webkit-search-cancel-button { -webkit-appearance: none;}
+
 .h2_hdr {
     margin-top: 275px;
     display: block;
@@ -567,30 +569,38 @@ h1 {
 .prj_link,
 .prj_search {
     display: block;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 20%;
     display: none;
 }
 
 .prj_link {
-    left: 35%;
+    left: 38%;
+    background: url(../img/link.svg) no-repeat 0px center;
 }
 
 .prj_search {
-    right: 35%;
+    right: 38%;
+    background: url(../img/link_search.svg) no-repeat 0px center;
 }
 
 .project:hover .prj_search,
 .project:hover .prj_link {
     display: block;
-    fill: #c7b299;
+/*    border: 1px solid #fff;*/
 }
 
+.prj_search:hover,
+.prj_link:hover {
+    background-position: -30px center;
+}
+/*
 .project:hover svg:hover {
     fill: #fff;
 }
+*/
 
 .section_2 button {
     margin-top: 10px;
@@ -600,12 +610,29 @@ h1 {
 /*---------section-video--------*/
 
 .video {
+    display: block;
     border: 1px solid #445161;
     padding: 0;
-    object-fit: cover;
+    height: 705px;
+    object-fit: contain;
     min-width: 100%;
+    overflow-y: hidden;
+    position: relative;
 }
 
+.video_button {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #fff;
+}
+.video div {
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    color: #fff;
+    font: 30px 'raleway medium';
+    text-align: center;
+}
 
 /*---------mobile--------*/
 
@@ -641,10 +668,12 @@ details {
 }
 
 details p {
-    margin-left: 21px;
+    margin-left: 20px;
 }
 
 summary {
+/*    margin-left: 30px;*/
+    padding-left: 20px;
     outline: none;
     position: relative;
     font: 16px/28px 'montserrat', sans-serif;
@@ -652,7 +681,7 @@ summary {
 }
 
 summary::-webkit-details-marker {
-    display: none
+    display: none;
 }
 
 summary:before {
@@ -661,15 +690,16 @@ summary:before {
     border-radius: 50%;
     color: #c7b299;
     font-size: 21px;
-    /*    position: absolute;*/
-    /*    top: -10px;*/
-    /*    left: -45px;*/
+    position: absolute;
+    top: -1px;
+    left: -10px;
 }
 
 details[open] summary:before {
-    font-family: 'shevron';
-    content: "\e900";
+/*    font-family: 'shevron';*/
+/*    content: "\e900";*/
     color: #555;
+    transform: rotate(90deg);
 }
 
 
