@@ -1,0 +1,61 @@
+/*---------------------*/
+
+.nav_logo:hover .logo path {
+    animation: shine 2s ease-out;
+}
+
+@keyframes shine {
+    0% {
+        fill: #555;
+    }
+    20% {
+        transform: scale(0.65, 0.65);
+        fill: #fff;
+    }
+    50% {
+        fill: #555;
+    }
+    60% {
+        fill: #fff;
+    }
+    70% {
+        fill: #666;
+    }
+    100% {
+        fill: #fff;
+    }
+}
+
+@keyframes bubu {
+    from{opacity: 0;}
+    to {opacity: 1;}
+}
+.nav_prj:hover .path2,
+.nav_prj:hover .path1,
+.nav_top_rgt:hover .path2,
+.nav_top_rgt:hover .path1 {
+    animation: diss .5s ease-out forwards;
+}
+
+@keyframes diss {
+    from {
+        fill: #fff;
+    }
+    to {
+        fill: transparent;
+    }
+}
+
+@keyframes zlet {
+    from {transform: translateX(-20px);}
+    to {opacity: 1;}
+}
+@keyframes zlet2 {
+    from {transform: translateX(20px);}
+    to {opacity: 1;}
+}
+
+@keyframes partners {
+    from {opacity: 1;}
+    to {transform: scale(1.5, 1.5);}
+}
